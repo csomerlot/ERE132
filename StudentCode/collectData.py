@@ -34,7 +34,7 @@ while True: ## infinite loop
     light = 100.0 * lightReading / 1024.0 ## % of full light
 
     #### write it out to the data file
-    log(temp, light)
+    log(tempCelcius, light)
     
     sleep(1) # pauses for 1 second
 
