@@ -7,10 +7,8 @@
 - plug into network
 - sudo reboot now
 - install WebIDE via: curl https://raw.githubusercontent.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh -s - --offline
-- sudo apt-get install build-essential python-dev python-smbus git
-- git clone https://github.com/adafruit/Adafruit_Python_MCP3008.git
-- cd Adafruit_Python_MCP3008
-- sudo python setup.py install
+- sudo apt-get install python-pip
+- sudo pip install adafruit-mcp3008
 
 ## from another computer:
 - connect to <newhostname>[.esf.edu] from web browser
