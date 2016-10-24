@@ -7,5 +7,5 @@ def log(*messages):
     for m in messages: text += "%s\t" % m
     print (text)
     with open(__file__+".log", 'a') as logfile:
-        logfile.write("%s:\t%s\n" % (dt.now(), text))
+        logfile.write("%.19s:\t%s\n" % (dt.now(), text))
 
