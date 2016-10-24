@@ -2,7 +2,8 @@
 
 ## Setup of RPi from stock raspbian-lite:
 - start disconnected from network
-- sudo raspi-config to internationalisation options to change keyboard layout to English (US)
+- Change keyboard: sudo nano /etc/default/keyboard so that XKBLAYOUT="us"
+-- or: L='us' && sudo sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"'$L'\"/g' /etc/default/keyboard
 - Change hostname from default raspberrypi via: sudo nano /etc/hostname
 - plug into network
 - sudo reboot now
@@ -17,6 +18,6 @@
 - change code and RUN
 
 ## back on RPi:
-- Create a symlink in /etc/init.d: sudo ln -s /home/webide/repositories/ERE132/StudentCode/collectData.py 
+- Create a symlink in /etc/init.d: sudo ln -s /home/webide/repositories/ERE132/StudentCode/collectData.py /etc/init.d/collectData
 - change creds: sudo chmod a+rwx /home/webide/repositories/ERE132/StudentCode/collectData.py
 - set the collectData.py file to be run automatically on boot: sudo update-rc.d collectData defaults
